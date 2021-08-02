@@ -111,3 +111,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MAINTENANCE_MODE = False
