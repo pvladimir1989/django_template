@@ -32,6 +32,12 @@ services:
       - db
       - redis
 
+  rabmq:
+    image: rabbitmq
+
+  minio:
+    image: minio
+
   redis:
     image: "redis:alpine"
     ports:

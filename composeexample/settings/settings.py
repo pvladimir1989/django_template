@@ -36,6 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'testapp.apps.TestappConfig',
+    'django_celery_beat',
+    'rest_framework',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -72,7 +75,6 @@ WSGI_APPLICATION = 'composeexample.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 # settings.py
-
 
 
 # Password validation
