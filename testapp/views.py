@@ -1,6 +1,7 @@
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.conf import settings
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.viewsets import ModelViewSet
 
 from testapp.models import Book
@@ -18,3 +19,5 @@ def index(request: HttpRequest) -> HttpResponse:
 class BooksViewSet(ModelViewSet):
     queryset = Book.objects.all()
     serializer_class = BooksSerializer
+    filter_backends = [DjangoFilterBackend]
+    filter_fields=['price']
