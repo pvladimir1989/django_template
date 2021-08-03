@@ -35,8 +35,8 @@ services:
   rabmq:
     image: rabbitmq
 
-  minio:
-    image: minio
+#  minio:
+#    image: minio
 
   redis:
     image: "redis:alpine"

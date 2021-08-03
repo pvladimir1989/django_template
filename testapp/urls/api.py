@@ -11,6 +11,7 @@ router.register(r'books', BooksViewSet)
 # router.register(r'someitems', SomeItemsListView)
 
 urlpatterns = [
-    path('v1/', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # path('v1/', include(router.urls)),
+    # path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    router.urls
 ]

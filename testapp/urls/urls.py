@@ -1,6 +1,12 @@
 from django.urls import path
-from testapp.views import index
+from rest_framework.routers import SimpleRouter
+
+from testapp.views import index, BooksViewSet
 from django.contrib import admin
+
+router = SimpleRouter()
+
+router.register(r'book', BooksViewSet)
 
 urlpatterns = [
 
@@ -8,3 +14,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
 ]
+
+urlpatterns += router.urls
